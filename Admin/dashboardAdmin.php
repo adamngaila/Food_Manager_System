@@ -189,6 +189,7 @@ if ($order_list->num_rows > 0) {
                         <!-- /widget-content --> 
                      </div>
                      <!-- /widget --> 
+                    </div>
                      <!-- /span6 --> 
                   </div>
                   <!-- /row --> 
