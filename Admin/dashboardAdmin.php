@@ -1,4 +1,4 @@
-<?php
+ <?php
 include '../model/food.php';
 $food_obj = new Food();
 $order_list = $food_obj->dashboard_orders();
