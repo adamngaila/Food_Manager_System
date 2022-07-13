@@ -1,18 +1,14 @@
-   <?php
-      include '../model/food.php';
-      $food_obj = new Food();
-
-      $order_list = $food_obj->dashboard_orders();
-      $total_orders = $food_obj->dashboard_order_total();
-      $total_sales = $food_obj->dashboard_order_sales();
-      $r = $total_sales->fetch_assoc();
-     
-      
-      $order_feedback = $food_obj->dashboard_order_feedback();
-        if(isset($_GET['id'])){
-           $food_obj->update_order($_GET['id']);
-          }
-      
+<?php
+include '../model/food.php';
+$food_obj = new Food();
+$order_list = $food_obj->dashboard_orders();
+$total_orders = $food_obj->dashboard_order_total();
+$total_sales = $food_obj->dashboard_order_sales();
+$r = $total_sales->fetch_assoc();
+$order_feedback = $food_obj->dashboard_order_feedback();
+if (isset($_GET['id'])) {
+    $food_obj->update_order($_GET['id']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -160,18 +156,16 @@
                 </thead>
                 <tbody>
               <?php
-      
-      $order_list = $food_obj->dashboard_orders();
-
+$order_list = $food_obj->dashboard_orders();
 if ($order_list->num_rows > 0) {
-  while ($row = $order_list->fetch_assoc()) {
-     ?>
+    while ($row = $order_list->fetch_assoc()) {
+?>
                   <tr>
                     <td> <?php echo $row["Order_Details"] ?> </td>
                     <td> <?php echo $row["Quantity"] ?> </td>
                        <td> <?php echo $row["status"] ?> </td>
                     <td> <?php echo $row["Time"] ?> </td>
-                   <td class="td-actions"><a href="<?php echo 'dashboardAdmin.php?id='.$row["Order_Id"] ?>" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a></td>
+                   <td class="td-actions"><a href="<?php echo 'dashboardAdmin.php?id=' . $row["Order_Id"] ?>" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a></td>
                   </tr>
                       <?php
     }
