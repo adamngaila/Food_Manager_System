@@ -79,6 +79,7 @@ if (isset($_GET['id'])) {
          </div>
          <!-- /subnavbar-inner --> 
       </div>
+    </div>
       <!-- /subnavbar -->
       <div class="main">
          <div class="main-inner">
