@@ -1,4 +1,4 @@
-<?php
+   <?php
    include '../model/food.php';
    $food_obj = new Food();
    
@@ -12,7 +12,7 @@
      if(isset($_GET['id'])){
         $food_obj->update_order($_GET['id']);
        }
- ?>
+   ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
