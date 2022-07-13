@@ -4,10 +4,10 @@ Class Food {
     private $conn;
     function __construct() {
    
-    $servername = "localhost";
-    $dbname = "id18897796_foodordersmanager";
-    $username = "id18897796_foodmanager";
-    $password = "FoodTFTproject01@";
+    $servername = "lcpbq9az4jklobvq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+    $dbname = "l1k9sc6pvhkdwh6l";
+    $username = "ehdo64503lru4pkg";
+    $password = "qu7jjc6m3mpt6d3p";
   
 
     // Create connection
